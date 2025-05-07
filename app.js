@@ -16,10 +16,11 @@ const app = express();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*", // Allows all domains
-    credentials: true,
+    origin: "https://vericapture-fe-codebase.onrender.com", // Specific allowed origin
+    credentials: true, // Allow credentials (cookies, headers, etc.)
   })
 );
+
 
 
 app.use(express.json());
