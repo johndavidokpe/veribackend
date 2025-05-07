@@ -38,7 +38,7 @@ userRouter.get(
 
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "strict",
+  sameSite: "none",
       maxAge: 3 * 60 * 60 * 1000,
       secure: process.env.NODE_ENV === "production",
     });
@@ -68,7 +68,7 @@ userRouter.get(
 
     res.cookie("token", token, {
       httpOnly: true,
-      sameSite: "strict",
+  sameSite: "none",
       maxAge: 3 * 60 * 60 * 1000,
       secure: process.env.NODE_ENV === "production",
     });
@@ -184,7 +184,7 @@ userRouter.post("/password-reset-otp", async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+  sameSite: "none",
       maxAge: 15 * 60 * 1000,
     });
 
